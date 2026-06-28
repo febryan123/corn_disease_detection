@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Penyakit Daun Jagung | AI CNN</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Phosphor Icons for modern icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-effect"></div>
+    
+    <header>
+        <div class="logo">
+            <i class="ph-fill ph-plant"></i>
+            <span>AgriVision <strong>Hortikultura</strong></span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="badge">DenseNet121 CNN Architecture</div>
+            <h1>Deteksi Penyakit<br><span class="highlight">Daun Jagung</span></h1>
+            <p>Sistem cerdas berbasis Deep Learning untuk mendeteksi penyakit Karat Daun, Bercak Daun, dan Hawar Daun secara instan dengan tingkat akurasi tinggi.</p>
+        </section>
+
+        <section class="upload-section">
+            <div class="upload-container" id="uploadContainer">
+                <input type="file" id="fileInput" accept="image/jpeg, image/png, image/jpg" hidden>
+                
+                <div class="upload-content" id="uploadContent">
+                    <div class="upload-icon-wrapper">
+                        <i class="ph ph-cloud-arrow-up"></i>
+                    </div>
+                    <h3>Unggah Foto Daun</h3>
+                    <p>Seret dan jatuhkan file di sini atau <span class="browse-link" id="browseBtn">cari file</span></p>
+                    <span class="file-hint">Mendukung JPG, JPEG, PNG</span>
+                </div>
+
+                <div class="preview-content hidden" id="previewContent">
+                    <img id="imagePreview" alt="Preview Daun Jagung">
+                    <button class="btn-remove" id="btnRemove"><i class="ph ph-x"></i> Hapus</button>
+                </div>
+            </div>
+
+            <button class="btn-primary" id="btnAnalyze" disabled>
+                <i class="ph ph-scan"></i> Analisis Gambar
+            </button>
+            
+            <div class="loading-state hidden" id="loadingState">
+                <div class="spinner"></div>
+                <span>Memproses dengan model AI...</span>
+            </div>
+        </section>
+
+        <section class="result-section hidden" id="resultSection">
+            <div class="result-card">
+                <h2 class="result-title">Hasil Analisis</h2>
+                
+                <div class="result-main">
+                    <div class="prediction-box" id="predictionBox">
+                        <span class="label">Klasifikasi</span>
+                        <h3 id="predictedClass">Karat Daun (Common Rust)</h3>
+                    </div>
+                    
+                    <div class="confidence-box">
+                        <span class="label">Tingkat Kepercayaan</span>
+                        <div class="progress-ring">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path class="circle-bg"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle" id="confidenceCircle"
+                                    stroke-dasharray="0, 100"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <text x="18" y="20.35" class="percentage" id="confidenceText">0%</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-box" id="recommendationBox">
+                    <i class="ph-fill ph-info"></i>
+                    <div id="recommendationText" class="recommendation-content">Rekomendasi penanganan akan muncul di sini.</div>
+                </div>
+                
+                <div class="probabilities-container">
+                    <h4>Probabilitas Kelas Lainnya</h4>
+                    <ul class="prob-list" id="probList">
+                        <!-- Items injected by JS -->
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Aplikasi Deteksi Penyakit Daun Jagung &copy; 2026. Didukung oleh Dela Salle Manado.</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
