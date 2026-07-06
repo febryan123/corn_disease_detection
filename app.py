@@ -19,6 +19,13 @@ def index():
     """
     return render_template('index.html')
 
+@app.route('/info')
+def info():
+    """
+    Render the corn leaf encyclopedia/information page.
+    """
+    return render_template('info.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     """

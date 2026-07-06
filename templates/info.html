@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensiklopedia Daun Jagung | AgriVision</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-effect"></div>
+    
+    <header>
+        <div class="logo">
+            <i class="ph-fill ph-plant"></i>
+            <span>AgriVision <strong>Hortikultura</strong></span>
+        </div>
+    </header>
+
+    <main class="container info-container">
+        <section class="hero-section">
+            <div class="badge">Informasi & Edukasi Jagung</div>
+            <h1>Ensiklopedia<br><span class="highlight">Penyakit Daun Jagung</span></h1>
+            <p>Panduan lengkap untuk mengidentifikasi gejala, memahami penyebab, dan menerapkan cara penanganan serta pencegahan untuk berbagai kondisi daun jagung.</p>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="info-nav">
+            <a href="/" class="btn-secondary btn-back">
+                <i class="ph ph-arrow-left"></i> Kembali ke Deteksi
+            </a>
+        </div>
+
+        <!-- Interactive Tabs -->
+        <section class="encyclopedia-section">
+            <div class="tabs-container">
+                <button class="tab-btn active" data-tab="sehat">
+                    <i class="ph ph-check-circle"></i> Daun Sehat
+                </button>
+                <button class="tab-btn" data-tab="bercak">
+                    <i class="ph ph-warning-circle"></i> Bercak Daun
+                </button>
+                <button class="tab-btn" data-tab="karat">
+                    <i class="ph ph-warning-circle"></i> Karat Daun
+                </button>
+                <button class="tab-btn" data-tab="hawar">
+                    <i class="ph ph-warning-circle"></i> Hawar Daun
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="encyclopedia-content">
+                
+                <!-- 1. Daun Sehat -->
+                <div class="tab-content active" id="content-sehat">
+                    <div class="info-card card-success">
+                        <div class="info-card-header">
+                            <div class="status-icon"><i class="ph-fill ph-check-circle"></i></div>
+                            <div class="status-title">
+                                <h2>Daun Sehat (Healthy Leaf)</h2>
+                                <span class="scientific-name">Zea mays - Kondisi Optimal</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-block block-desc">
+                                <h3><i class="ph ph-book-open"></i> Deskripsi</h3>
+                                <p>Daun jagung yang sehat merupakan fondasi utama bagi proses fotosintesis yang efisien. Karakteristik ini menunjukkan bahwa tanaman menyerap air dan unsur hara (terutama Nitrogen, Fosfor, dan Kalium) secara seimbang, serta terhindar dari serangan patogen jamur, bakteri, maupun hama perusak tanaman.</p>
+                            </div>
+
+                            <div class="info-block block-symptoms">
+                                <h3><i class="ph ph-eye"></i> Karakteristik Fisik</h3>
+                                <ul>
+                                    <li><strong>Warna Hijau Pekat:</strong> Menunjukkan kandungan klorofil yang tinggi dan kecukupan nitrogen.</li>
+                                    <li><strong>Tekstur Bersih:</strong> Permukaan daun halus, tegak atau melengkung secara normal tanpa robekan atau bercak nekrotik.</li>
+                                    <li><strong>Tanpa Pustul/Spora:</strong> Sisi atas dan bawah daun bersih dari serbuk oranye (karat) maupun lendir bakteri.</li>
+                                    <li><strong>Kekakuan Optimal:</strong> Daun tidak layu pada siang hari dan sel-sel daun tetap turgid (kokoh).</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-causes">
+                                <h3><i class="ph ph-thermometer"></i> Faktor Pendukung Kesehatan</h3>
+                                <ul>
+                                    <li><strong>Nutrisi Seimbang:</strong> Pemberian pupuk NPK secara tepat waktu sesuai fase vegetatif dan generatif.</li>
+                                    <li><strong>Ketersediaan Air Cukup:</strong> Penyiraman teratur yang menghindari kondisi kekeringan ekstrem maupun genangan air berlebih.</li>
+                                    <li><strong>Sinar Matahari Penuh:</strong> Tanaman mendapatkan minimal 8 jam paparan cahaya langsung setiap hari.</li>
+                                    <li><strong>Jarak Tanam Sesuai:</strong> Memungkinkan penetrasi cahaya matahari dan sirkulasi angin yang merata di sekitar kanopi tanaman.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-treatment">
+                                <h3><i class="ph ph-sparkles"></i> Perawatan & Pencegahan</h3>
+                                <ul>
+                                    <li>Lakukan monitoring secara mingguan untuk mendeteksi gejala awal hama atau penyakit.</li>
+                                    <li>Jaga kebersihan lahan (sanitasi) dari gulma yang bisa menjadi inang alternatif hama/penyakit.</li>
+                                    <li>Lakukan rotasi tanaman dengan tanaman kacang-kacangan setelah masa panen jagung selesai untuk memutus siklus hidup patogen tanah.</li>
+                                    <li>Gunakan varietas jagung unggulan yang memiliki resistensi tinggi terhadap penyakit lokal.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Bercak Daun -->
+                <div class="tab-content" id="content-bercak">
+                    <div class="info-card card-warning">
+                        <div class="info-card-header">
+                            <div class="status-icon"><i class="ph-fill ph-warning"></i></div>
+                            <div class="status-title">
+                                <h2>Bercak Daun (Leaf Spot)</h2>
+                                <span class="scientific-name">Patogen: Cercospora zeae-maydis / Bipolaris maydis</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-block block-desc">
+                                <h3><i class="ph ph-book-open"></i> Deskripsi</h3>
+                                <p>Bercak daun adalah penyakit infeksi jamur yang membatasi kapasitas fotosintesis daun secara signifikan. Jamur menyerang jaringan klorofil dan menciptakan luka mati (nekrotik) yang mengganggu transportasi nutrisi ke buah/tongkol jagung, sehingga menurunkan bobot biji jagung.</p>
+                            </div>
+
+                            <div class="info-block block-symptoms">
+                                <h3><i class="ph ph-eye"></i> Gejala Klinis</h3>
+                                <ul>
+                                    <li><strong>Bercak Persegi Panjang:</strong> Gejala khas berupa noda berbentuk persegi panjang memanjang sejajar dengan urat daun.</li>
+                                    <li><strong>Perubahan Warna:</strong> Awalnya berupa bintik kecil kehijauan basah, lalu memanjang dan berubah menjadi cokelat kelabu atau abu-abu.</li>
+                                    <li><strong>Efek Kematian Daun:</strong> Jika serangan parah, bercak-bercak akan menyatu (koalisi) membuat seluruh daun mengering dan mati secara prematur.</li>
+                                    <li><strong>Serangan dari Bawah:</strong> Gejala biasanya pertama kali muncul pada daun-daun tua di bagian bawah tanaman, lalu merambat ke atas.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-causes">
+                                <h3><i class="ph ph-thermometer"></i> Penyebab & Kondisi Optimal</h3>
+                                <ul>
+                                    <li><strong>Patogen Utama:</strong> Jamur *Cercospora zeae-maydis* yang bertahan hidup pada sisa-sisa tanaman di permukaan tanah dari musim sebelumnya.</li>
+                                    <li><strong>Suhu Hangat:</strong> Berkembang optimal pada kisaran suhu 25°C – 30°C.</li>
+                                    <li><strong>Kelembapan Tinggi:</strong> Udara yang lembap (RH > 90%) akibat hujan rintik-rintik berkepanjangan atau kabut tebal sangat mempercepat perkecambahan spora jamur.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-treatment">
+                                <h3><i class="ph ph-sparkles"></i> Solusi & Penanganan</h3>
+                                <ul>
+                                    <li><strong>Penanganan Kimia:</strong> Lakukan penyemprotan fungisida berbahan aktif kombinasi golongan triazol dan strobilurin (seperti Difenokonazol + Azoksistrobin) secara teratur sesuai dosis.</li>
+                                    <li><strong>Pengolahan Tanah:</strong> Lakukan pembajakan tanah yang dalam untuk membenamkan sisa-sisa tanaman jagung yang terinfeksi agar jamur mati.</li>
+                                    <li><strong>Nutrisi Tambahan:</strong> Pastikan tanaman mendapat pasokan kalium (K) yang cukup untuk memperkuat dinding sel daun dari penetrasi jamur.</li>
+                                    <li><strong>Pemilihan Benih:</strong> Gunakan benih jagung hibrida yang terbukti tahan atau toleran terhadap bercak daun abu-abu.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Karat Daun -->
+                <div class="tab-content" id="content-karat">
+                    <div class="info-card card-warning">
+                        <div class="info-card-header">
+                            <div class="status-icon"><i class="ph-fill ph-warning"></i></div>
+                            <div class="status-title">
+                                <h2>Karat Daun (Common Rust)</h2>
+                                <span class="scientific-name">Patogen: Puccinia sorghi</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-block block-desc">
+                                <h3><i class="ph ph-book-open"></i> Deskripsi</h3>
+                                <p>Karat daun disebabkan oleh jamur obligat parasit yang membentuk pustul-pustul berisi spora di permukaan daun. Penyakit ini menyerap air dan makanan langsung dari sel-sel daun hidup, mengakibatkan daun kehilangan kekuatan, layu, dan gugur sebelum waktunya.</p>
+                            </div>
+
+                            <div class="info-block block-symptoms">
+                                <h3><i class="ph ph-eye"></i> Gejala Klinis</h3>
+                                <ul>
+                                    <li><strong>Pustul Karat Menonjol:</strong> Munculnya bintil-bintil menonjol (pustul) berbentuk bulat hingga lonjong di kedua permukaan daun (sisi atas dan bawah).</li>
+                                    <li><strong>Warna Bubuk Oranye:</strong> Pustul berisi serbuk halus berwarna cokelat kemerahan atau oranye terang seperti karat besi.</li>
+                                    <li><strong>Pecahnya Kulit Daun:</strong> Ketika pustul matang, epidermis daun pecah melepaskan spora (urediniospora) yang terbang terbawa angin.</li>
+                                    <li><strong>Kekuningan Sekitar Luka:</strong> Terbentuknya area kuning (klorosis) di sekeliling pustul akibat rusaknya jaringan daun.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-causes">
+                                <h3><i class="ph ph-thermometer"></i> Penyebab & Kondisi Optimal</h3>
+                                <ul>
+                                    <li><strong>Patogen Utama:</strong> Jamur *Puccinia sorghi*. Spora menyebar dengan bantuan angin ke area pertanian yang luas.</li>
+                                    <li><strong>Suhu Sejuk hingga Sedang:</strong> Jamur ini menyukai kondisi suhu yang relatif sejuk hingga hangat (16°C – 23°C).</li>
+                                    <li><strong>Embun Malam Basah:</strong> Kelembapan tinggi dan keberadaan air bebas (embun malam atau bekas air hujan) di permukaan daun selama minimal 6 jam memicu perkecambahan spora karat.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-treatment">
+                                <h3><i class="ph ph-sparkles"></i> Solusi & Penanganan</h3>
+                                <ul>
+                                    <li><strong>Jarak Tanam Longgar:</strong> Pelebaran jarak tanam meningkatkan sirkulasi udara dan paparan sinar matahari, yang mempercepat penguapan air di permukaan daun sehingga jamur tidak sempat berkecambah.</li>
+                                    <li><strong>Penyemprotan Fungisida:</strong> Semprotkan fungisida berbahan aktif Tebukonazol, Propikonazol, atau Mankozeb. Lakukan penyemprotan secara merata di permukaan bawah daun karena di sanalah spora sering terkonsentrasi.</li>
+                                    <li><strong>Pembersihan Inang Alternatif:</strong> Bersihkan tanaman liar jenis *Oxalis* (calincing) di sekitar lahan karena tanaman ini berfungsi sebagai inang perantara bagi siklus seksual jamur karat.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Hawar Daun -->
+                <div class="tab-content" id="content-hawar">
+                    <div class="info-card card-warning">
+                        <div class="info-card-header">
+                            <div class="status-icon"><i class="ph-fill ph-warning"></i></div>
+                            <div class="status-title">
+                                <h2>Hawar Daun (Northern Leaf Blight)</h2>
+                                <span class="scientific-name">Patogen: Exserohilum turcicum</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-block block-desc">
+                                <h3><i class="ph ph-book-open"></i> Deskripsi</h3>
+                                <p>Hawar daun utara (Northern Leaf Blight/NLB) adalah salah satu penyakit paling merusak pada tanaman jagung. Penyakit ini menyebabkan lesi besar memanjang yang membakar daun tanaman, secara drastis menurunkan luas daun aktif untuk fotosintesis dan berisiko gagal panen total jika menyerang sebelum fase pembungaan.</p>
+                            </div>
+
+                            <div class="info-block block-symptoms">
+                                <h3><i class="ph ph-eye"></i> Gejala Klinis</h3>
+                                <ul>
+                                    <li><strong>Lesi Berbentuk Cerutu:</strong> Bercak khas berukuran sangat besar berbentuk elips memanjang menyerupai cerutu atau perahu (panjang 2,5 cm hingga 15 cm).</li>
+                                    <li><strong>Warna Cokelat Jerami:</strong> Bercak awalnya berwarna hijau keabu-abuan basah, kemudian mengering menjadi cokelat pucat/jerami.</li>
+                                    <li><strong>Zona Konsentris Gelap:</strong> Pada cuaca basah, bagian tengah lesi sering tertutup lapisan spora hitam keabu-abuan membentuk cincin konsentris samar.</li>
+                                    <li><strong>Kerusakan Daun Massal:</strong> Daun yang terserang parah tampak seperti terbakar dari ujung, mengering seluruhnya, dan menggulung ke dalam.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-causes">
+                                <h3><i class="ph ph-thermometer"></i> Penyebab & Kondisi Optimal</h3>
+                                <ul>
+                                    <li><strong>Patogen Utama:</strong> Jamur *Exserohilum turcicum* (syn. *Helminthosporium turcicum*). Jamur bertahan pada sisa tanaman terinfeksi di permukaan tanah.</li>
+                                    <li><strong>Suhu Hangat Kuku:</strong> Tumbuh subur pada rentang suhu 18°C – 27°C.</li>
+                                    <li><strong>Kondisi Basah Berkepanjangan:</strong> Hujan lebat diikuti cuaca mendung/lembab menyebarkan spora melalui cipratan air dan angin ke bagian atas tanaman atau tanaman di sekelilingnya.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block block-treatment">
+                                <h3><i class="ph ph-sparkles"></i> Solusi & Penanganan</h3>
+                                <ul>
+                                    <li><strong>Rotasi Lahan:</strong> Sangat dianjurkan melakukan rotasi tanaman minimal 1-2 tahun dengan tanaman non-graminae (seperti kacang kedelai atau kacang tanah) untuk memutus persediaan spora di tanah.</li>
+                                    <li><strong>Eradikasi & Pembakaran:</strong> Potong daun yang terserang di awal infeksi, bawa keluar dari lahan, lalu musnahkan/bakar agar spora tidak terbawa angin ke tanaman sehat.</li>
+                                    <li><strong>Aplikasi Fungisida Sistemik:</strong> Lakukan penyemprotan fungisida sistemik berbahan aktif golongan strobilurin (seperti Pyraclostrobin atau Azoksistrobin) atau kontak Mankozeb secara berkala saat musim hujan tiba atau begitu gejala lesi cerutu pertama muncul.</li>
+                                    <li><strong>Pemupukan Nitrogen yang Pas:</strong> Hindari pemupukan Nitrogen berlebih yang memicu pertumbuhan daun terlalu rimbun namun lunak (sehingga rentan ditembus jamur), dan pastikan Kalium tercukupi.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Aplikasi Deteksi Penyakit Daun Jagung &copy; 2026. Didukung oleh Dela Salle Manado.</p>
+    </footer>
+
+    <!-- Interactive script inside the template for robust, fast loading -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // Handle switching between tabs
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+
+                    // Set active button
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Set active content with transition
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === `content-${targetTab}`) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Read query string to automatically open a specific tab (e.g. /info?tab=karat)
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialTab = urlParams.get('tab');
+            if (initialTab) {
+                const targetButton = document.querySelector(`.tab-btn[data-tab="${initialTab}"]`);
+                if (targetButton) {
+                    targetButton.click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
