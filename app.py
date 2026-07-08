@@ -1,12 +1,12 @@
 from flask import Flask, request, jsonify, render_template
 import os
-from model2 import load_model, predict_image
+from model_torch import load_model, predict_image
 
 app = Flask(__name__)
 
 # Load model globally so it's loaded only once when the server starts
 print("Loading model...")
-model = load_model("models/corn_disease/densenet121_corn_20260628_0817_acc98-2_full_checkpoint.pt")
+model = load_model("models/torch/densenet121_corn_20260628_0817_acc98-2_full_checkpoint.pt")
 if model is not None:
     print("Model loaded successfully.")
 else:

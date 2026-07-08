@@ -22,7 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentFile = null;
 
     // --- Upload Logic ---
-    browseBtn.addEventListener('click', () => {
+    browseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+    });
+    
+    uploadContainer.addEventListener('click', (e) => {
+        e.stopPropagation();
         fileInput.click();
     });
 
